@@ -13,10 +13,11 @@
 <body>
 <header class="header">
     <div class="container">
-        <div class="row">
-            <div class="col">
+        <div class="row header-row">
+            <div class="col logo">
                 <img src="assets/img/logo.svg" alt="">
             </div>
+            <div class="d-none col d-md-block slogan">Комплексный интернет-маркетинг<br>и digital-решения для вашего бизнеса</div>
             <div class="col d-flex justify-content-end">
                 <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -75,10 +76,12 @@
                             <button class="button">Оставить заявку</button>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 bottom">
-                        *В связи со сложившейся ситуацией в мире наша компания разработала уникальный ускоренный курс
+                    <div class="col-12 col-sm-7 bottom">
+                        <div class="inner">
+                            *В связи со сложившейся ситуацией в мире наша компания разработала уникальный ускоренный курс
+                        </div>
                     </div>
-                    <div class="col-12 col-sm-6 yandex-logo">
+                    <div class="col-12 col-sm-5 yandex-logo">
                         <span><img src="assets/img/yandex-direct.svg" alt=""></span>
                     </div>
                 </div>
@@ -158,12 +161,12 @@
             <div class="for-list">
                 <div class="for-item">
                     <div class="for-img"><img src="assets/img/for-1.png" alt=""></div>
-                    <div class="for-top">Всем, кто хочет освоить востребованную digital-профессию</div>
+                    <div class="for-top">Всем, кто хочет освоить<br> востребованную digital-профессию</div>
                     <div class="for-bottom">Получить все необходимые навыки, отработать их на практике и начать работать уже во время обучения</div>
                 </div>
                 <div class="for-item">
                     <div class="for-img"><img src="assets/img/for-2.png" alt=""></div>
-                    <div class="for-top">Руководителям
+                    <div class="for-top">Руководителям<br class="xs-none">
                         и маркетологам компании</div>
                     <div class="for-bottom">Наш курс позволит разбираться в нюансах рекламных кампаний и контролировать подрядчиков</div>
                 </div>
@@ -191,9 +194,9 @@
         </div>
         <div class="cost">
             <h2 class="h2">Стоимость обучения</h2>
-            <div class="cost-description">Мы работаем по договору, ознакомиться<br> и <a class="download" href="/">скачать его</a></div>
+            <div class="cost-description">Мы работаем по договору, ознакомиться и <a class="download" href="/">скачать его</a></div>
             <div class="row price-list">
-                <div class="col-12">
+                <div class="col-12 col-md-6">
                     <div class="price-item">
                         <div class="price-value">
                             30.000
@@ -212,7 +215,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 col-md-6">
                     <div class="price-item">
                         <div class="price-value">
                             50.000
@@ -235,20 +238,22 @@
         </div>
         <div class="about">
             <div class="row">
-                <div class="col-12 col-md-8">
+                <div class="col-12 col-md-7">
                     <h2 class="h2">О преподавателе</h2>
                     <ul class="about-list">
-                        <li class="about-list-item">Интернет-маркетолог с<br> опытом работы 13 лет</li>
-                        <li class="about-list-item">Сертифицированный<br> специалист по<br> контекстной рекламе<br> Яндекс Директ</li>
-                        <li class="about-list-item">Ведущий специалист<br> IT-компании</li>
+                        <li class="about-list-item">Интернет-маркетолог с опытом работы 13 лет</li>
+                        <li class="about-list-item">Сертифицированный специалист по<br> контекстной рекламе Яндекс Директ</li>
+                        <li class="about-list-item">Ведущий специалист IT-компании</li>
                     </ul>
-                    <a class="to-telegram" href="https://t.me/+79272028004">Написать в телеграм</a>
-                    <div class="about-tel">
-                        <a href="tel:+79272028004">+7 927 202 80 04</a>
+                    <div class="about-contacts">
+                        <a class="to-telegram" href="https://t.me/+79272028004">Написать в телеграм</a>
+                        <div class="about-tel">
+                            <a href="tel:+79272028004">+7 927 202 80 04</a>
+                        </div>
                     </div>
                     <div class="about-example-text">
                         <div class="inner">
-                            Пример сертификата,<br>который вы получите 👇🏻
+                            Пример сертификата, который вы получите 👇🏻
                         </div>
                     </div>
                 </div>
@@ -258,7 +263,10 @@
             </div>
         </div>
         <div class="certificate">
-            <img src="assets/img/blastbit-certificate.png" alt="">
+            <picture>
+                <source media="(min-width:768px)" srcset="assets/img/blastbit-certificate-md.png">
+                <img src="assets/img/blastbit-certificate.png" alt="Сертификат" style="width:auto;">
+            </picture>
         </div>
         <nav class="bottom-menu">
             <ul class="nav">
