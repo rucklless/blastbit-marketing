@@ -127,6 +127,13 @@ a {
     }
 }
 
+@media (min-width: 768px) {
+    .h2 {
+        font-size: 40px;
+        line-height: 48px;
+    }
+}
+
 .button {
     background-color: var(--bg-yellow-color);
     display: inline-block;
@@ -146,7 +153,7 @@ a {
 }
 
 header.header {
-    padding: 1.65rem 1.5rem;
+    padding: 1.5rem 1.5rem 1.65rem;
 }
 
 header.header .navbar-toggler {
@@ -166,16 +173,20 @@ header.header .navbar-toggler-icon {
     padding-bottom: 0rem;
 }
 
-.first-screen {
+.first-screen .girl {
+    background: url("../img/girl.png"), url("../img/girl-shadow.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    padding-bottom: 1.4rem;
     padding-top: 3.3rem;
-    background: url("../img/girl.png") no-repeat;
-    background-position: 90% 9%;
+    position: relative;
 }
 
 @media (max-width: 575.98px) {
-    .first-screen {
-        background-position-y: 68%;
-        background-position-x: 0px;
+    .first-screen .girl {
+        background-position-y: bottom;
+        background-position-x: center;
+        padding-bottom: 30rem;
     }
 }
 
@@ -234,28 +245,26 @@ header.header .navbar-toggler-icon {
     color: var(--second-text-color);
 }
 
-.first-screen .bottom .yandex-logo {
+.first-screen .yandex-logo {
     display: flex;
     justify-content: end;
-}
-
-.first-screen .bottom .yandex-logo span {
-    margin-top: 1.7rem;
-}
-
-@media (min-width: 768px) {
-    .first-screen .bottom .yandex-logo span {
-        margin-top: 0.3rem;
-    }
-}
-
-.first-screen .motivation {
-    margin-top: 1.5rem;
+    align-items: end;
 }
 
 @media (max-width: 575.98px) {
-    .first-screen .motivation {
-        margin-top: 27rem;
+    .first-screen .yandex-logo {
+        position: absolute;
+        bottom: 34px;
+    }
+}
+
+.first-screen .yandex-logo span {
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .first-screen .yandex-logo span {
+        margin-top: 0.3rem;
     }
 }
 
@@ -274,6 +283,12 @@ header.header .navbar-toggler-icon {
 .first-screen .motivation .bg {
     padding: 3.3rem 1.4rem 0;
     border-radius: 8px 8px 0 0;
+}
+
+@media (min-width: 768px) {
+    .first-screen .motivation .bg {
+        padding: 2.3rem 1.4rem 0;
+    }
 }
 
 .first-screen .motivation .bg .highlight {
@@ -344,7 +359,13 @@ header.header .navbar-toggler-icon {
 }
 
 .how {
-    padding-top: 3.2rem;
+    padding-top: 3.5rem;
+}
+
+@media (min-width: 768px) {
+    .how {
+        padding-top: 5.1rem;
+    }
 }
 
 .how .how-items-list {
@@ -441,18 +462,31 @@ header.header .navbar-toggler-icon {
 
 @media (max-width: 575.98px) {
     .for-whom .for-item {
-        grid-template-areas: "image" "top" "bottom";
+    /*grid-template-areas:
+    "image"
+    "top"
+    "bottom";*/
+    }
+}
+
+@media (min-width: 768px) {
+    .for-whom .for-item {
+        grid-template-columns: 1fr 4fr;
     }
 }
 
 .for-whom .for-item .for-img {
     grid-area: image;
+    text-align: center;
 }
 
-@media (max-width: 575.98px) {
-    .for-whom .for-item .for-img {
-        text-align: center;
-        margin-bottom: 0rem;
+.for-whom .for-item .for-img img {
+    width: 54px;
+}
+
+@media (min-width: 768px) {
+    .for-whom .for-item .for-img img {
+        width: auto;
     }
 }
 
@@ -573,12 +607,6 @@ header.header .navbar-toggler-icon {
     border-radius: 8px;
 }
 
-@media (max-width: 575.98px) {
-    .cost .price-item {
-        padding: 2.45rem 1.4rem 2.5rem;
-    }
-}
-
 .cost .price-value {
     font-weight: 700;
     font-size: 50px;
@@ -611,8 +639,8 @@ header.header .navbar-toggler-icon {
 
 @media (max-width: 575.98px) {
     .cost .price-button button {
-        padding: 1rem 2rem;
-        font-size: 16px;
+    /*padding: 1rem 2rem;
+    font-size: 16px;*/
     }
 }
 
@@ -631,15 +659,10 @@ header.header .navbar-toggler-icon {
     display: inline-block;
 }
 
-@media (max-width: 575.98px) {
-    .cost .price-footer a {
-        font-size: 13px;
-    }
-}
-
 .about {
     margin-top: 3.1rem;
-    background: url("../img/girl-2.png") no-repeat;
+    background: url("../img/girl-2.png"), url("../img/girl-2-shadow.png");
+    background-repeat: no-repeat;
     background-position: 101% 82%;
     position: relative;
 }
@@ -655,12 +678,6 @@ header.header .navbar-toggler-icon {
     text-align: left;
 }
 
-@media (max-width: 575.98px) {
-    .about .h2 {
-        font-size: 22px;
-    }
-}
-
 .about .about-list {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -669,12 +686,19 @@ header.header .navbar-toggler-icon {
     flex-wrap: wrap;
     gap: 1rem;
     margin: 0;
+    flex-direction: column;
 }
 
 .about .about-list-item {
     position: relative;
     font-size: 16px;
     line-height: 22px;
+}
+
+@media (max-width: 575.98px) {
+    .about .about-list-item br {
+        display: none;
+    }
 }
 
 .about .about-list-item:before {
@@ -703,8 +727,15 @@ header.header .navbar-toggler-icon {
 @media (max-width: 575.98px) {
     .about .about-example-text {
         position: absolute;
-        bottom: 10px;
+        bottom: 35px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
+}
+
+.about .about-example-text .inner {
+    display: inline-block;
 }
 
 .about .name-wrap {
@@ -715,14 +746,14 @@ header.header .navbar-toggler-icon {
     font-size: 16px;
     line-height: 18px;
     position: absolute;
-    top: 122px;
-    left: 42px;
+    top: -320px;
+    right: 20px;
 }
 
 @media (max-width: 575.98px) {
     .about .name {
         top: 50px;
-        left: 237px;
+        left: 190px;
     }
 }
 
