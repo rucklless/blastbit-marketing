@@ -429,12 +429,6 @@ header.header .navbar-toggler-icon {
     margin-bottom: 1.6rem;
 }
 
-@media (max-width: 575.98px) {
-    .for-whom .for-list :first-child {
-        margin-bottom: 0rem;
-    }
-}
-
 .for-whom .for-item {
     display: grid;
     grid-template-areas: "image   top" "image   bottom";
