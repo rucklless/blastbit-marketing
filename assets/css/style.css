@@ -265,12 +265,18 @@ header.header .navbar-toggler-icon {
 }
 
 .top-menu .navbar-nav .nav-item .nav-link {
-    padding-right: 0rem;
-    padding-left: 0rem;
     font-size: 16px;
     line-height: 16px;
-    padding: 16px 0;
+    padding: 16px 11px;
     color: #FFFFFF;
+}
+
+.top-menu .navbar-nav .nav-item:first-child .nav-link {
+    padding-left: 0rem;
+}
+
+.top-menu .navbar-nav .nav-item:last-child .nav-link {
+    padding-right: 0rem;
 }
 
 .top-menu .dropdown-toggle::after {
@@ -280,6 +286,56 @@ header.header .navbar-toggler-icon {
     top: 2px;
     margin-left: 3px;
     vertical-align: unset;
+}
+
+.top-menu li {
+    display: flex;
+}
+
+.top-menu .dropdown-submenu .dropdown-menu {
+    margin-left: 111%;
+    margin-top: -3px;
+}
+
+.top-menu .dropdown-menu {
+    margin-top: 10px;
+    background: #303062;
+    box-shadow: -9px 256px 102px rgba(0, 0, 0, 0.01), -5px 144px 86px rgba(0, 0, 0, 0.05), -2px 64px 64px rgba(0, 0, 0, 0.09), -1px 16px 35px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: none;
+    padding: 17px;
+    min-width: 266px;
+    flex-direction: column;
+}
+
+.top-menu .dropdown-menu a {
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 8px;
+    padding: 12px 28px 12px 17px;
+    color: #FFFFFF;
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+}
+
+.top-menu .dropdown-menu a:hover {
+    background: #6667AB;
+}
+
+.top-menu .dropdown-menu.show {
+    display: flex;
+}
+
+.top-menu .dropdown-menu.show .dropdown-submenu.open .dropdown-menu {
+    display: block;
+}
+
+.top-menu .dropdown-menu .dropdown-submenu .dropdown-toggle::after {
+    content: url("../img/chevron-right.svg");
+    position: absolute;
+    top: 13px;
+    right: 8px;
 }
 
 .first-screen .girl {
@@ -1160,6 +1216,7 @@ header.header .navbar-toggler-icon {
 @media (min-width: 768px) {
     .about {
         margin-top: 48px;
+        padding-bottom: 13px;
     }
 }
 
@@ -1171,7 +1228,7 @@ header.header .navbar-toggler-icon {
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
     .about {
         padding-left: 97px;
     }
@@ -1183,7 +1240,7 @@ header.header .navbar-toggler-icon {
 
 @media (min-width: 992px) {
     .about .h2 {
-        margin-left: 36px;
+        margin-left: 0px;
     }
 }
 
@@ -1215,6 +1272,7 @@ header.header .navbar-toggler-icon {
         padding-top: 48px;
         padding-left: 37px;
         row-gap: 24px;
+        width: auto;
     }
 }
 
@@ -1266,6 +1324,7 @@ header.header .navbar-toggler-icon {
         margin-top: 16px;
         -moz-column-gap: 16px;
         column-gap: 16px;
+        width: auto;
     }
 }
 
@@ -1312,6 +1371,12 @@ header.header .navbar-toggler-icon {
     width: 217px;
 }
 
+@media (min-width: 768px) {
+    .about .about-example-text .inner {
+        width: auto;
+    }
+}
+
 @media (min-width: 992px) {
     .about .about-example-text .inner {
         width: auto;
@@ -1344,6 +1409,20 @@ header.header .navbar-toggler-icon {
     }
 }
 
+@media (min-width: 768px) {
+    .about .name {
+        top: 68px;
+        right: -37px;
+    }
+}
+
+@media (min-width: 992px) {
+    .about .name {
+        top: 65px;
+        right: 43px;
+    }
+}
+
 .certificate {
     margin-top: 36px;
     padding-bottom: 7rem;
@@ -1357,7 +1436,7 @@ header.header .navbar-toggler-icon {
 
 @media (min-width: 768px) {
     .certificate {
-        margin-top: 13px;
+        margin-top: 0px;
     }
 }
 
@@ -1365,6 +1444,12 @@ header.header .navbar-toggler-icon {
     .certificate {
         margin-top: 0;
         padding-bottom: 108px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .certificate {
+        text-align: center;
     }
 }
 
