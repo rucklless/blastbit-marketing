@@ -8,7 +8,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="assets/css/jquery-simple-mobilemenu-slide.css">
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="assets/js/jquery-simple-mobilemenu.js"></script>
     <title></title>
 </head>
 <body>
@@ -21,12 +23,10 @@
             <div class="d-none col d-md-block slogan">Комплексный интернет-маркетинг<br>и digital-решения для вашего бизнеса</div>
             <div class="col d-none phone d-lg-flex">+7 (846) 252-42-85</div>
             <div class="d-none d-lg-flex callback col">
-                <button class="button-transparent">Заказать обратный звонок</button>
+                <button class="button-transparent" data-bs-toggle="modal" data-bs-target="#callback">Заказать обратный звонок</button>
             </div>
-            <div class="col d-flex justify-content-end d-lg-none">
-                <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <div class="col d-flex justify-content-end d-lg-none" id="hamburger">
+
             </div>
         </div>
     </div>
@@ -112,7 +112,7 @@
                             Востребованная профессия <span class="highlight">за 1 месяц</span> с выдачей<br>сертификата и последующей поддержкой
                         </div>
                         <div class="button-wrap">
-                            <button class="button">Оставить заявку</button>
+                            <button class="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Оставить заявку</button>
                         </div>
                     </div>
                     <div class="col-12 col-sm-7 bottom  order-lg-3">
@@ -247,7 +247,7 @@
                             Обучение в группе до 10 человек
                         </div>
                         <div class="price-button">
-                            <button class="button">Записаться на курс</button>
+                            <button class="button" data-bs-toggle="modal" data-bs-target="#success">Записаться на курс</button>
                         </div>
                         <div class="price-footer">
                             <a href="#">Получить персональную консультацию</a>
@@ -344,9 +344,134 @@
 </div>
 
 
+<ul class="mobile_menu">
+    <li>
+        <a href="#testing2.com">Продвижение сайтов</a>
+        <ul class="submenu">
+            <li><a href="#testing2-1.com">Chapter 1</a></li>
+            <li>
+                <a href="#testing2-2.com">Chapter 2</a>
+                <ul class="submenu">
+                    <li><a href="#testing2-2-1.com">Chapter 2.1</a> </li>
+                    <li>
+                        <a href="#testing2-2-2.com">Chapter 2.2</a>
+                        <ul class="submenu">
+                            <li><a href="#testing2-2-2-1.com">Chapter 2.2.1</a></li>
+                            <li><a href="#testing2-2-2-2.com">Chapter 2.2.2</a>
+                                <ul class="submenu">
+                                    <li><a href="#testing2-2-2-1.com">Chapter 2.2.2.1</a></li>
+                                    <li><a href="#testing2-2-2-2.com">Chapter 2.2.2.2</a></li>
+                                    <li><a href="#testing2-2-2-3.com">Chapter 2.2.2.3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#testing2-2-2-3.com">Chapter 2.2.1</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#testing2-2-3.com">Chapter 2.3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#testing2-3.com">Chapter 3</a>
+                <ul class="submenu">
+                    <li> <a href="#testing2-3-1.com">Chapter 3.1</a> </li>
+                    <li> <a href="#testing2-3-2.com">Chapter 3.2</a> </li>
+                    <li> <a href="#testing2-3-3.com">Chapter 3.3</a> </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#testing4.com">Разработка сайтов</a>
+        <ul class="submenu">
+            <li><a href="">Chapter 1</a></li>
+            <li><a href="">Chapter 2</a></li>
+            <li><a href="">Chapter 3</a></li>
+        </ul>
+    </li>
+    <li> <a href="#testing1.com">Контекстная реклама</a> </li>
+    <li> <a href="#testing1.com">Аудит сайта</a> </li>
+    <li> <a href="#testing1.com">Веб-аналитика</a> </li>
+    <li> <a href="#testing1.com">Таргетинг</a> </li>
+    <li> <a href="#testing1.com">Техническая поддержка</a> </li>
+</ul>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Оставить заявку</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="popup-form">
+                    <div>
+                        <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Имя">
+                    </div>
+                    <div>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail">
+                    </div>
+                    <div>
+                        <input type="tel" class="form-control" id="phone" aria-describedby="phoneHelp" placeholder="Телефон">
+                    </div>
+                    <button type="submit" class="btn btn-primary button">Оставить заявку</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="private-policy">
+                    *Нажимая на кнопку «Оставить заявку», вы соглашаетесь с <a href="#">Политикой обработки персональных данных</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
+<div class="modal fade" id="callback" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Мы вам перезвоним</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="popup-form">
+                    <div>
+                        <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Имя">
+                    </div>
+                    <div>
+                        <input type="tel" class="form-control" id="phone" aria-describedby="phoneHelp" placeholder="Телефон">
+                    </div>
+                    <button type="submit" class="btn btn-primary button">Заказать обратный звонок</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="private-policy">
+                    *Нажимая на кнопку «Оставить заявку», вы соглашаетесь с <a href="#">Политикой обработки персональных данных</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
+<div class="modal fade " id="success" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="success">
+                    <h5 class="title">Спасибо, Иван</h5>
+                    <p>Ваша заявка успешно отправлена.<br>
+                        Мы свяжемся с вами через 10 секунд.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</div>
 
 <!--
 <h1>Привет!</h1>
