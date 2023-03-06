@@ -552,7 +552,7 @@ header.header .navbar-toggler-icon {
     line-height: 18px;
     font-weight: 700;
     position: relative;
-    border-radius: 6px;
+    border-radius: 0px 6px 6px 6px;
     padding: 0 0.4rem;
 }
 
@@ -564,6 +564,7 @@ header.header .navbar-toggler-icon {
 
 .first-screen .motivation .bg .highlight:first-child {
     z-index: 1;
+    border-radius: 6px 6px 6px 0px;
 }
 
 .first-screen .motivation .bg .description {
@@ -1091,6 +1092,7 @@ header.header .navbar-toggler-icon {
     position: relative;
     text-decoration: none;
     border-bottom: 1px solid #fff;
+    white-space: nowrap;
 }
 
 .cost .download:hover {
@@ -1123,6 +1125,12 @@ header.header .navbar-toggler-icon {
     border-radius: 8px;
 }
 
+@media (max-width: 575.98px) {
+    .cost .price-item {
+        padding: 2.45rem 1.4rem 2.5rem;
+    }
+}
+
 @media (min-width: 768px) {
     .cost .price-item {
         padding-left: 45px;
@@ -1144,11 +1152,25 @@ header.header .navbar-toggler-icon {
     text-align: center;
 }
 
+@media (max-width: 575.98px) {
+    .cost .price-value {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+
 .cost .price-unit {
     font-size: 24px;
     line-height: 29px;
     text-align: center;
     margin-top: 1.2rem;
+}
+
+@media (max-width: 575.98px) {
+    .cost .price-unit {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
 }
 
 .cost .price-description {
@@ -1157,6 +1179,13 @@ header.header .navbar-toggler-icon {
     text-align: center;
     color: #9494B0;
     margin-top: 1rem;
+}
+
+@media (max-width: 575.98px) {
+    .cost .price-description {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
 }
 
 .cost .price-button {
@@ -1196,6 +1225,13 @@ header.header .navbar-toggler-icon {
     color: #9494B0;
 }
 
+@media (max-width: 575.98px) {
+    .cost .price-footer {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+
 .cost .price-footer a {
     text-decoration: none;
     border-bottom: 1px solid #fff;
@@ -1218,8 +1254,8 @@ header.header .navbar-toggler-icon {
 
 @media (max-width: 575.98px) {
     .about {
-        padding-bottom: 25rem;
-        background-position: 101% 100%;
+        padding-bottom: 30rem;
+        background-position: 101% 83%;
     }
 }
 
@@ -1363,7 +1399,7 @@ header.header .navbar-toggler-icon {
 @media (max-width: 575.98px) {
     .about .about-example-text {
         position: absolute;
-        bottom: 35px;
+        bottom: 13px;
         display: flex;
         justify-content: center;
         width: 100%;
