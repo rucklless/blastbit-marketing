@@ -368,7 +368,7 @@ header.header .navbar-toggler-icon {
 
 .first-screen .girl-img {
     position: absolute;
-    bottom: 284px;
+    bottom: 188px;
     right: unset;
     left: 0px;
     z-index: -1;
@@ -430,7 +430,7 @@ header.header .navbar-toggler-icon {
     .first-screen .girl {
     /*background-position-y: bottom;
     background-position-x: center;*/
-        padding-bottom: 767px;
+        padding-bottom: 675px;
         background-position-y: 571px;
         padding-left: 36px;
         padding-right: 36px;
@@ -568,7 +568,7 @@ header.header .navbar-toggler-icon {
 @media (max-width: 575.98px) {
     .first-screen .yandex-logo {
         position: absolute;
-        bottom: 286px;
+        bottom: 190px;
         right: 0px;
     }
 }
@@ -783,6 +783,12 @@ header.header .navbar-toggler-icon {
     padding-left: 50px;
     line-height: 0;
     position: relative;
+}
+
+@media (max-width: 575.98px) {
+    .first-screen .motivation .bg .left .title {
+        width: 232px;
+    }
 }
 
 @media (min-width: 768px) {
