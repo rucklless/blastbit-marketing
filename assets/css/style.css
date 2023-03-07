@@ -89,7 +89,7 @@ body {
 
 @media (min-width: 1200px) {
     body {
-        background: url(../img/background.png), var(--bg-color);
+        background: url(../img/background.webp), var(--bg-color);
         background-size: cover;
     }
 }
@@ -552,21 +552,34 @@ header.header .navbar-toggler-icon {
 }
 
 .first-screen .motivation::before {
-    content: url(../img/girl.png);
+    content: url(../img/girl.webp);
     position: absolute;
+}
+
+@media (max-width: 575.98px) {
+    .first-screen .motivation::before {
+        background-image: url("../img/girl.webp");
+    }
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
     .first-screen .motivation::before {
-        content: url(../img/girl@2x.png);
+        content: url(../img/girl@2x.webp);
     }
 }
 
 .first-screen .motivation::after {
-    content: url(../img/girl-shadow.png);
+    content: url(../img/girl-shadow.webp);
     position: absolute;
     opacity: 0.27;
     filter: blur(20px);
+}
+
+@media (max-width: 575.98px) {
+    .first-screen .motivation::after {
+        background-image: url(../img/girl-shadow.webp);
+        content: "";
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -574,6 +587,13 @@ header.header .navbar-toggler-icon {
         position: absolute;
         bottom: 277px;
         z-index: -1;
+        content: "";
+        width: 300px;
+        height: 500px;
+        max-width: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-y: bottom;
     }
 }
 
@@ -725,7 +745,7 @@ header.header .navbar-toggler-icon {
 }
 
 .first-screen .motivation .bg .left .title::before {
-    content: url("../img/fist.png");
+    content: url("../img/fist.webp");
     display: block;
     left: 4px;
     position: absolute;
@@ -1359,7 +1379,7 @@ header.header .navbar-toggler-icon {
 
 .about {
     margin-top: 3.1rem;
-    background: url("../img/girl-2.png"), url("../img/girl-2-shadow.png");
+    background: url("../img/girl-2.webp"), url("../img/girl-2-shadow.webp");
     background-repeat: no-repeat;
     background-position: 101% 82%;
     position: relative;
