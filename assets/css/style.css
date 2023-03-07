@@ -85,9 +85,13 @@ body {
     font-family: "Aeroport", Arial, Helvetica, sans-serif;
     background-color: var(--bg-color);
     color: #ffffff;
-  /*@include media(xs){
-    font-size: 1px;
-  }*/
+}
+
+@media (min-width: 1200px) {
+    body {
+        background: url(../img/background.png), var(--bg-color);
+        background-size: cover;
+    }
 }
 
 body * {
@@ -363,17 +367,8 @@ header.header .navbar-toggler-icon {
 }
 
 .first-screen .girl {
-    background: url("../img/girl.png"), url("../img/girl-shadow.png");
-    background-repeat: no-repeat;
-    background-position: 108% 8%;
     padding-top: 52px;
     position: relative;
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-    .first-screen .girl {
-        background: url("../img/girl@2x.png"), url("../img/girl-shadow.png");
-    }
 }
 
 @media (max-width: 575.98px) {
@@ -556,11 +551,9 @@ header.header .navbar-toggler-icon {
     }
 }
 
-@media (max-width: 575.98px) {
-    .first-screen .motivation::before {
-        content: url(../img/girl.png);
-        position: absolute;
-    }
+.first-screen .motivation::before {
+    content: url(../img/girl.png);
+    position: absolute;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
@@ -569,11 +562,11 @@ header.header .navbar-toggler-icon {
     }
 }
 
-@media (max-width: 575.98px) {
-    .first-screen .motivation::after {
-        content: url(../img/girl-shadow.png);
-        position: absolute;
-    }
+.first-screen .motivation::after {
+    content: url(../img/girl-shadow.png);
+    position: absolute;
+    opacity: 0.27;
+    filter: blur(20px);
 }
 
 @media (max-width: 575.98px) {
@@ -581,6 +574,42 @@ header.header .navbar-toggler-icon {
         position: absolute;
         bottom: 277px;
         z-index: -1;
+    }
+}
+
+@media (min-width: 576px) {
+    .first-screen .motivation::before, .first-screen .motivation::after {
+        top: 14px;
+        right: -20px;
+        z-index: -1;
+    }
+}
+
+@media (min-width: 768px) {
+    .first-screen .motivation::before, .first-screen .motivation::after {
+        top: 11px;
+        right: -7px;
+    }
+}
+
+@media (min-width: 992px) {
+    .first-screen .motivation::before, .first-screen .motivation::after {
+        top: 10px;
+        right: 183px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .first-screen .motivation::before, .first-screen .motivation::after {
+        top: 45px;
+        right: 233px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .first-screen .motivation::before, .first-screen .motivation::after {
+        top: 45px;
+        right: 284px;
     }
 }
 
@@ -1336,12 +1365,6 @@ header.header .navbar-toggler-icon {
     position: relative;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-    .about {
-        background: url("../img/girl-2@2x.png"), url("../img/girl-2-shadow.png");
-    }
-}
-
 @media (max-width: 575.98px) {
     .about {
         padding-bottom: 30rem;
@@ -1820,13 +1843,4 @@ header.header .navbar-toggler-icon {
     display: flex;
     flex-direction: column;
     gap: 15px;
-}
-
-.shadow-1 {
-    background: url(../img/shadow-1.png);
-    width: 600px;
-    height: 600px;
-    position: absolute;
-    z-index: -1;
-    top: 1px;
 }
