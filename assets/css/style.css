@@ -89,7 +89,7 @@ body {
 
 @media (min-width: 1200px) {
     body {
-        background: url(../img/background.webp), var(--bg-color);
+        background: url(../img/background.png), var(--bg-color);
         background-size: cover;
     }
 }
@@ -366,6 +366,61 @@ header.header .navbar-toggler-icon {
     right: 8px;
 }
 
+.first-screen .girl-img {
+    position: absolute;
+    bottom: 284px;
+    right: unset;
+    left: 0px;
+    z-index: -1;
+    max-width: 100%;
+}
+
+@media (min-width: 576px) {
+    .first-screen .girl-img {
+        bottom: 153px;
+        right: -20px;
+        left: unset;
+    }
+}
+
+@media (min-width: 768px) {
+    .first-screen .girl-img {
+        bottom: 137px;
+        right: -6px;
+    }
+}
+
+@media (min-width: 992px) {
+    .first-screen .girl-img {
+        bottom: 0px;
+        right: 183px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .first-screen .girl-img {
+        right: 233px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .first-screen .girl-img {
+        right: 284px;
+    }
+}
+
+.first-screen .girl-img .shadow {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+    filter: blur(20px);
+}
+
+.first-screen .girl-img img, .first-screen .girl-img source {
+    max-width: 100%;
+}
+
 .first-screen .girl {
     padding-top: 52px;
     position: relative;
@@ -552,48 +607,40 @@ header.header .navbar-toggler-icon {
 }
 
 .first-screen .motivation::before {
-    content: url(../img/girl.webp);
-    position: absolute;
-}
+  /*@include media(xs){
 
-@media (max-width: 575.98px) {
-    .first-screen .motivation::before {
-        background-image: url("../img/girl.webp");
-    }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-    .first-screen .motivation::before {
-        content: url(../img/girl@2x.webp);
-    }
+  }
+  @media(min-resolution: 2dppx) {
+    content: url(../img/girl@2x.png);
+  }*/
 }
 
 .first-screen .motivation::after {
-    content: url(../img/girl-shadow.webp);
-    position: absolute;
-    opacity: 0.27;
-    filter: blur(20px);
+  /* content: url(../img/girl-shadow.png);
+   position: absolute;
+   opacity: 0.27;
+   filter: blur(20px);*/
 }
 
 @media (max-width: 575.98px) {
     .first-screen .motivation::after {
-        background-image: url(../img/girl-shadow.webp);
-        content: "";
+    /*background-image: url(../img/girl-shadow.png);
+    content: '';*/
     }
 }
 
 @media (max-width: 575.98px) {
     .first-screen .motivation::before, .first-screen .motivation::after {
-        position: absolute;
-        bottom: 277px;
-        z-index: -1;
-        content: "";
-        width: 300px;
-        height: 500px;
-        max-width: 100%;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position-y: bottom;
+    /*position: absolute;
+    bottom: 277px;
+    z-index: -1;
+    content: '';
+    width: 300px;
+    height: 500px;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: bottom;*/
     }
 }
 
@@ -745,7 +792,7 @@ header.header .navbar-toggler-icon {
 }
 
 .first-screen .motivation .bg .left .title::before {
-    content: url("../img/fist.webp");
+    content: url("../img/fist.png");
     display: block;
     left: 4px;
     position: absolute;
@@ -1379,16 +1426,16 @@ header.header .navbar-toggler-icon {
 
 .about {
     margin-top: 3.1rem;
-    background: url("../img/girl-2.webp"), url("../img/girl-2-shadow.webp");
-    background-repeat: no-repeat;
-    background-position: 101% 82%;
+  /*background: url("../img/girl-2.png"), url("../img/girl-2-shadow.png");
+  background-repeat: no-repeat;
+  background-position: 101% 82%;*/
     position: relative;
 }
 
 @media (max-width: 575.98px) {
     .about {
         padding-bottom: 30rem;
-        background-position: 101% 83%;
+    /*background-position: 101% 83%; //101% 100%*/
     }
 }
 
@@ -1403,13 +1450,51 @@ header.header .navbar-toggler-icon {
     .about {
         padding-left: 60px;
         padding-bottom: 29px;
-        background-position: 83% 100%;
+    /*background-position: 83% 100%;*/
     }
 }
 
 @media (min-width: 1200px) {
     .about {
         padding-left: 97px;
+    }
+}
+
+.about .about-girl {
+    position: absolute;
+    bottom: 66px;
+    right: 0px;
+    max-width: 100%;
+}
+
+.about .about-girl .shadow {
+    position: absolute;
+  /* display: none; */
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    filter: blur(50px);
+}
+
+.about .about-girl img {
+    max-width: 100%;
+}
+
+@media (min-width: 576px) {
+    .about .about-girl {
+        bottom: 0px;
+    }
+}
+
+@media (min-width: 992px) {
+    .about .about-girl {
+        right: 100px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .about .about-girl {
+        right: 135px;
     }
 }
 
